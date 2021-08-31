@@ -5,13 +5,11 @@ colorama==0.4.4
 Django==3.2.6
 django-cors-headers==3.7.0
 djangorestframework==3.12.4
-drf-writable-nested==0.6.3
 isort==5.9.3
 lazy-object-proxy==1.6.0
 mccabe==0.6.1
 psycopg2-binary==2.9.1
 pycodestyle==2.7.0
-PyJWT==1.7.1
 pylint==2.9.6
 pylint-django==2.4.4
 pylint-plugin-utils==0.6
