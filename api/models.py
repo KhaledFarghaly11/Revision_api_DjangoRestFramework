@@ -10,44 +10,44 @@ class Employee(models.Model):
         return self.name
 
 class Details(models.Model):
-    text_1 = models.CharField(max_length=250, default=True)
-    text_2 = models.CharField(max_length=250, default=True)
+    text_1 = models.CharField(max_length=250)
+    text_2 = models.CharField(max_length=250)
     iconName = models.CharField(max_length=250, null=True,blank=True)
 
     def __str__(self):
         return self.iconName
 
 class Tasks(models.Model):
-    name = models.CharField(max_length=250, default=True)
-    description = models.TextField(default=True)
-    assignedTo = models.ManyToManyField(Employee, blank=True)
-    amountDue = models.CharField(max_length=250, default=True)
-    dueDate = models.CharField(max_length=250, default=True)
-    isCompleted = models.BooleanField(default=True)
+    name = models.CharField(max_length=250)
+    description = models.TextField()
+    assignedTo = models.ManyToManyField(Employee)
+    amountDue = models.CharField(max_length=250)
+    dueDate = models.CharField(max_length=250)
+    isCompleted = models.BooleanField()
 
     def __str__(self):
         return self.name
 
 
-class Partener(models.Model):
-    name = models.CharField(max_length=250, default=True)
-    description = models.TextField(default=True)
-    details = models.ManyToManyField(Details, related_name='partener')
-    tasks = models.ManyToManyField(Tasks)
+class Partner(models.Model):
+    name = models.CharField(max_length=250)
+    description = models.TextField()
+    details = models.ManyToManyField(Details, related_name='partner')
+    tasks = models.ManyToManyField(Tasks, blank=True)
     
 
     def __str__(self):
         return self.name
 
-class NewPartener(models.Model):
-    name = models.CharField(max_length=250, default=True)
+class NewPartner(models.Model):
+    name = models.CharField(max_length=250)
     description = models.TextField(default=True)
-    name2 = models.CharField(max_length=250, default=True)
-    name3 = models.CharField(max_length=250, default=True)
-    name4 = models.CharField(max_length=250, default=True)
-    name5 = models.CharField(max_length=250, default=True)
-    name6 = models.CharField(max_length=250, default=True)
-    name7 = models.CharField(max_length=250, default=True)
+    name2 = models.CharField(max_length=250)
+    name3 = models.CharField(max_length=250)
+    name4 = models.CharField(max_length=250)
+    name5 = models.CharField(max_length=250)
+    name6 = models.CharField(max_length=250)
+    name7 = models.CharField(max_length=250)
     
 
     def __str__(self):

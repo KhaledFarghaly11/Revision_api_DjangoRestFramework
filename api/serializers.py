@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import  NewPartener,  Tasks, Partener, Details, Employee
+from .models import  NewPartner,  Tasks, Partner, Details, Employee
 
 
 
@@ -18,17 +18,17 @@ class DetailsSerializer(serializers.ModelSerializer):
         model = Details
         fields = '__all__'
 
-class PartenerSerializer(serializers.ModelSerializer):
+class PartnerSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Partener
+        model = Partner
         fields = "__all__"
         depth = 1
         
 
 
-class NewPartenerSerializer(serializers.ModelSerializer):
+class NewPartnerSerializer(serializers.ModelSerializer):
     class Meta:
-        model = NewPartener
+        model = NewPartner
         fields = '__all__'
 
 

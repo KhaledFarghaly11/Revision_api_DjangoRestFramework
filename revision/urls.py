@@ -7,8 +7,8 @@ router = DefaultRouter()
 router.register('tasks', views.viewsets_Tasks)
 router.register('details', views.viewsets_Details)
 router.register('employee', views.viewsets_Employee)
-router.register('partener', views.viewsets_Partener)
-router.register('new', views.viewsets_NewPartener)
+router.register('partner', views.viewsets_Partner)
+router.register('new', views.viewsets_NewPartner)
 
 
 

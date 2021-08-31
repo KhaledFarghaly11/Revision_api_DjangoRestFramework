@@ -1,5 +1,5 @@
-from .models import  NewPartener,Employee, Tasks, Details, Partener
-from .serializers import  NewPartenerSerializer, TasksSerializer, DetailsSerializer, EmployeeSerializer, PartenerSerializer
+from .models import  NewPartner,Employee, Tasks, Details, Partner
+from .serializers import  NewPartnerSerializer, TasksSerializer, DetailsSerializer, EmployeeSerializer, PartnerSerializer
 
 from rest_framework import viewsets
 
@@ -16,14 +16,14 @@ class viewsets_Details(viewsets.ModelViewSet):
     queryset = Details.objects.all()
     serializer_class = DetailsSerializer
 
-class viewsets_Partener(viewsets.ModelViewSet):
-    queryset = Partener.objects.all()
-    serializer_class = PartenerSerializer
+class viewsets_Partner(viewsets.ModelViewSet):
+    queryset = Partner.objects.all()
+    serializer_class = PartnerSerializer
 
 
 
-class viewsets_NewPartener(viewsets.ModelViewSet):
-    queryset = NewPartener.objects.all()
-    serializer_class = NewPartenerSerializer
+class viewsets_NewPartner(viewsets.ModelViewSet):
+    queryset = NewPartner.objects.all()
+    serializer_class = NewPartnerSerializer
 
 
