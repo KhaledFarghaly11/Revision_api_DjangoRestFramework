@@ -20,7 +20,7 @@ class Details(models.Model):
 class Tasks(models.Model):
     name = models.CharField(max_length=250, default=True)
     description = models.TextField(default=True)
-    assignedTo = models.ManyToManyField(Employee, null=True,blank=True)
+    assignedTo = models.ManyToManyField(Employee, blank=True)
     amountDue = models.CharField(max_length=250, default=True)
     dueDate = models.CharField(max_length=250, default=True)
     isCompleted = models.BooleanField(default=True)
