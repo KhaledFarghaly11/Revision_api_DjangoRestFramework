@@ -41,13 +41,13 @@ class Partner(models.Model):
 
 class NewPartner(models.Model):
     name = models.CharField(max_length=250)
-    description = models.TextField(default=True)
-    name2 = models.CharField(max_length=250)
-    name3 = models.CharField(max_length=250)
-    name4 = models.CharField(max_length=250)
-    name5 = models.CharField(max_length=250)
-    name6 = models.CharField(max_length=250)
-    name7 = models.CharField(max_length=250)
+    description = models.TextField()
+    field1 = models.CharField(max_length=250)
+    field2 = models.CharField(max_length=250)
+    field3 = models.CharField(max_length=250)
+    field4 = models.CharField(max_length=250)
+    field5 = models.CharField(max_length=250)
+    field6 = models.CharField(max_length=250)
     
 
     def __str__(self):
