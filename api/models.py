@@ -17,6 +17,11 @@ class DetailsPartner(models.Model):
     def __str__(self):
         return self.iconName
 
+class DetailsTask(models.Model):
+	Add_info_1 = models.CharField(max_length=100, default="")
+	Add_info_2 = models.CharField(max_length=100, default="")
+	Add_info_3 = models.CharField(max_length=100, default="")
+
 class Tasks(models.Model):
     name = models.CharField(max_length=250)
     description = models.TextField()
@@ -24,14 +29,11 @@ class Tasks(models.Model):
     amountDue = models.CharField(max_length=250)
     dueDate = models.CharField(max_length=250)
     isCompleted = models.BooleanField()
+    details = models.ManyToManyField(DetailsTask, blank=True)
 
     def __str__(self):
         return self.name
 
-class DetailsTask(models.Model):
-	Add_info_1 = models.CharField(max_length=100, default="")
-	Add_info_2 = models.CharField(max_length=100, default="")
-	Add_info_3 = models.CharField(max_length=100, default="")
 
 
 class Partner(models.Model):
