@@ -9,7 +9,7 @@ class Employee(models.Model):
     def __str__(self):
         return self.name
 
-class Details(models.Model):
+class DetailsPartner(models.Model):
     text_1 = models.CharField(max_length=250)
     text_2 = models.CharField(max_length=250)
     iconName = models.CharField(max_length=250, null=True,blank=True)
@@ -28,11 +28,16 @@ class Tasks(models.Model):
     def __str__(self):
         return self.name
 
+class DetailsTask(models.Model):
+	Add_info_1 = models.CharField(max_length=100, default="")
+	Add_info_2 = models.CharField(max_length=100, default="")
+	Add_info_3 = models.CharField(max_length=100, default="")
+
 
 class Partner(models.Model):
     name = models.CharField(max_length=250)
     description = models.TextField()
-    details = models.ManyToManyField(Details, related_name='partner')
+    details = models.ManyToManyField(DetailsPartner, related_name='partner')
     tasks = models.ManyToManyField(Tasks, blank=True)
     
 
