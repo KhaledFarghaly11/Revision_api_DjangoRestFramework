@@ -29,7 +29,7 @@ class Tasks(models.Model):
     amountDue = models.CharField(max_length=250)
     dueDate = models.CharField(max_length=250)
     isCompleted = models.BooleanField()
-    details = models.ManyToManyField(DetailsTask, blank=True)
+    details_tasks = models.ManyToManyField(DetailsTask, blank=True)
 
     def __str__(self):
         return self.name
