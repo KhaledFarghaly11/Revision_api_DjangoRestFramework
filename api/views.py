@@ -16,7 +16,7 @@ class viewsets_DetailsTask(viewsets.ModelViewSet):
     queryset = DetailsTask.objects.all()
     serializer_class = DetailsTaskSerializer
 
-class viewsets_Details(viewsets.ModelViewSet):
+class viewsets_DetailsPartner(viewsets.ModelViewSet):
     queryset = DetailsPartner.objects.all()
     serializer_class = DetailsPartnerSerializer
 

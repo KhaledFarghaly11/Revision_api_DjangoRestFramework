@@ -6,7 +6,7 @@ from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
 router.register('tasks', views.viewsets_Tasks)
 router.register('details-task', views.viewsets_DetailsTask)
-router.register('details', views.viewsets_Details)
+router.register('details', views.viewsets_DetailsPartner)
 router.register('employee', views.viewsets_Employee)
 router.register('partner', views.viewsets_Partner)
 router.register('new', views.viewsets_NewPartner)
