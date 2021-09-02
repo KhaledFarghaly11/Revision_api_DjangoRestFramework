@@ -2,9 +2,10 @@ from django.db import models
 # Create your models here.
 
 class Employee(models.Model):
-    name = models.CharField(max_length=250, null=True,blank=True)
+    fullName = models.CharField(max_length=250, null=True,blank=True)
     number = models.IntegerField(null=True,blank=True)
     email = models.EmailField(null=True,blank=True)
+    status = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
